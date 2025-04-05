@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TerraVista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="centered" id="home-page">
+    <h1>TerraVista</h1>
+    <p class="intro">Відкрий світ: обирай континент та дізнавайся про найцікавіші місця планети прямо з браузера!</p>
+    <button class="earth-button" onclick="goToMap()"></button>
+  </div>
+
+  <div class="map-page" id="map-page">
+    <button class="continent-btn" style="top: 20%; left: 25%;" onclick="showPlace('north_america')">Північна Америка</button>
+    <button class="continent-btn" style="top: 60%; left: 30%;" onclick="showPlace('south_america')">Південна Америка</button>
+    <button class="continent-btn" style="top: 18%; left: 50%;" onclick="showPlace('europe')">Європа</button>
+    <button class="continent-btn" style="top: 30%; left: 70%;" onclick="showPlace('asia')">Азія</button>
+    <button class="continent-btn" style="top: 45%; left: 55%;" onclick="showPlace('africa')">Африка</button>
+    <button class="continent-btn" style="top: 65%; left: 88%;" onclick="showPlace('australia')">Австралія</button>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+
+  <div class="popup" id="popup">
+    <h3 id="place-title"></h3>
+    <img id="place-image" src="" alt="Місце">
+    <div class="desc" id="place-desc"></div>
+    <div style="margin-top: 15px;">
+      <button onclick="showNextPlace()" style="margin-right: 10px;">Ще місце</button>
+      <button onclick="hidePopup()">Закрити</button>
+    </div>
+  </div>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Змінити тему</button>
+  <button class="back-button" onclick="goHome()">На головну</button>
+
+  <footer>
+    &copy; 2025 TerraVista | Розробник: terra@vista.dev
+  </footer>
+
+  <audio id="click-sound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
